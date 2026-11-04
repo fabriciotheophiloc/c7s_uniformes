@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uniformes C7S</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Catálogo dos novos uniformes do Colégio 7 de Setembro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: faixa de marca no topo, abas de segmento, vitrine de peças à esquerda e "provador" fixo à direita (empilha no celular) */
+:root{
+  --ink:#161C83;          /* azul do brasão */
+  --brand:#2816AA;        /* azul principal */
+  --sun:#F9BD12;          /* amarelo C7S */
+  --bg:#F6F6FB;
+  --surface:#FFFFFF;
+  --line:#DEDFEC;
+  --text:#1B1D3A;
+  --muted:#5D6082;
+  --tile:#ECEEF6;         /* fundo das fotos: claro nos dois temas, para peças marinho aparecerem */
+  --chip:#E8E6FA;
+  --chip-text:#2816AA;
+  --on-brand:#FFFFFF;
+  --focus:#F9BD12;
+  --f-display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --f-body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10122A;--surface:#181B3A;--line:#2B2F57;--text:#ECEDF8;--muted:#A6A9CC;
+  --tile:#DCDFEC;--chip:#2A2766;--chip-text:#D9D4FF;--ink:#0D1060;--brand:#5B4BE0;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10122A;--surface:#181B3A;--line:#2B2F57;--text:#ECEDF8;--muted:#A6A9CC;
+  --tile:#DCDFEC;--chip:#2A2766;--chip-text:#D9D4FF;--ink:#0D1060;--brand:#5B4BE0;color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:16px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+
+/* Topo */
+.top{background:var(--ink);color:var(--on-brand)}
+.top .wrap{padding-block:28px 0;display:grid;gap:18px}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sun);font-weight:600;margin:0}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.lead{margin:0;max-width:62ch;color:#D6D8F5}
+.draft{justify-self:start;font-size:.75rem;font-weight:600;background:rgba(249,189,18,.16);color:var(--sun);border:1px solid rgba(249,189,18,.45);padding:3px 10px;border-radius:999px}
+
+/* Abas de segmento */
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-top:6px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{appearance:none;border:0;cursor:pointer;font:600 .98rem var(--f-body);color:#C9CBF0;background:transparent;
+  padding:12px 16px 14px;border-radius:12px 12px 0 0;white-space:nowrap}
+.tab:hover{color:#fff}
+.tab[aria-selected="true"]{background:var(--bg);color:var(--text)}
+.tab .sm{display:none}
+
+/* Corpo */
+main .wrap{padding-block:28px 64px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:start}
+.rule{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:28px}
+.rule b{font-family:var(--f-display);font-size:1.05rem}
+.rule .dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--sun);margin-top:7px;box-shadow:0 0 0 4px rgba(249,189,18,.25)}
+.rule p{margin:2px 0 0;color:var(--muted)}
+
+section.grp{margin-bottom:36px}
+.grp-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:16px}
+.grp-head h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0;text-wrap:balance}
+.grp-head span{color:var(--muted);font-size:.85rem;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card.on{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand)}
+.shot{position:relative;background:var(--tile);aspect-ratio:1/1;max-width:100%;overflow:hidden}
+.shot img{position:absolute;inset:14px 14px 40px;width:calc(100% - 28px);height:calc(100% - 54px);object-fit:contain;filter:drop-shadow(0 6px 10px rgba(22,28,131,.18));transition:opacity .2s}
+.flip{position:absolute;left:10px;bottom:10px;display:flex;background:rgba(255,255,255,.92);border-radius:999px;padding:3px;gap:2px;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.flip button{appearance:none;border:0;background:transparent;font:600 .74rem var(--f-body);color:#4A4D72;padding:4px 10px;border-radius:999px;cursor:pointer}
+.flip button[aria-pressed="true"]{background:#161C83;color:#fff}
+.body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{margin:0;font-size:1rem;font-weight:600;line-height:1.3}
+.obs{margin:0;font-size:.82rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:.7rem;font-weight:600;letter-spacing:.03em;padding:2px 8px;border-radius:999px;background:var(--chip);color:var(--chip-text)}
+.chip.also{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:500}
+.pick{margin-top:auto;appearance:none;cursor:pointer;font:600 .86rem var(--f-body);border-radius:10px;padding:9px 10px;border:1.5px solid var(--brand);background:transparent;color:var(--text)}
+.pick:hover{background:var(--chip)}
+.pick[aria-pressed="true"]{background:var(--brand);color:#fff}
+
+/* Provador */
+aside.look{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:12px}
+.look h2{font-family:var(--f-display);font-weight:800;font-size:1.2rem;margin:0}
+.look .hint{margin:0;font-size:.85rem;color:var(--muted)}
+.stage{background:var(--tile);border-radius:12px;padding:14px;display:grid;gap:6px;justify-items:center;min-height:300px;align-content:center;position:relative}
+.stage img{max-height:170px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(22,28,131,.18))}
+.stage .empty{color:#6A6D92;font-size:.85rem;text-align:center;max-width:22ch}
+.stage .coat{position:absolute;right:8px;top:8px;width:72px;height:72px;object-fit:contain;max-height:none}
+.slots{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.slots li{display:flex;justify-content:space-between;gap:8px;font-size:.86rem;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.slots li span:first-child{color:var(--muted)}
+.slots li span:last-child{font-weight:600;text-align:right}
+.clear{appearance:none;border:0;background:transparent;color:var(--muted);text-decoration:underline;cursor:pointer;font:500 .82rem var(--f-body);justify-self:start;padding:0}
+
+.jump{display:none}
+
+/* Aba Informações */
+main.info .wrap{grid-template-columns:minmax(0,1fr)}
+main.info aside.look,main.info .rule{display:none}
+#info{display:grid;gap:28px}
+.info-intro{margin:0;max-width:62ch;font-size:1.05rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:6px;align-content:start}
+.fact .k{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fact .v{font-family:var(--f-display);font-weight:800;font-size:1.45rem;line-height:1.15;color:var(--text)}
+.fact .v::after{content:"";display:block;width:36px;height:4px;border-radius:2px;background:var(--sun);margin-top:10px}
+.fact p{margin:0;color:var(--muted)}
+.where{background:var(--ink);color:#fff;border-radius:var(--r);padding:20px;display:grid;gap:16px}
+.where h2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:0}
+.where .city{color:var(--sun);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.vendors{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.vendor{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:14px 16px}
+.vendor b{display:block;font-size:1.05rem;margin-bottom:6px}
+.vendor ul{margin:0;padding-left:18px;color:#D6D8F5;display:grid;gap:2px}
+.go h2{font-family:var(--f-display);font-weight:800;font-size:1.2rem;margin:0 0 12px}
+.go-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.go-list a{display:flex;justify-content:space-between;align-items:center;gap:8px;text-decoration:none;color:var(--text);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-weight:600}
+.go-list a:hover{border-color:var(--brand)}
+.go-list a span{color:var(--brand);font-size:1.2rem}
+footer{color:var(--muted);font-size:.8rem;border-top:1px solid var(--line)}
+footer .wrap{padding-block:18px 28px}
+
+@media (max-width:860px){
+  main .wrap{grid-template-columns:minmax(0,1fr)}
+  aside.look{position:static}
+  .jump{display:inline-flex;position:fixed;z-index:5;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));
+    background:var(--ink);color:#fff;border:0;border-radius:999px;padding:12px 18px;font:600 .9rem var(--f-body);box-shadow:0 6px 18px rgba(13,16,96,.35);cursor:pointer;gap:8px;align-items:center}
+  .jump b{background:var(--sun);color:var(--ink);border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:.78rem}
+}
+@media (max-width:480px){.tab .lg{display:none}.tab .sm{display:inline}.tabs{gap:2px}.tab{padding:11px 9px 13px;font-size:.88rem}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.body{padding:10px}.flip button{padding:4px 8px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;-webkit-text-size-adjust:100%}
+img{max-width:100%}
+[hidden]{display:none!important}
+html.embed .jump{display:none!important}
+.soon{display:grid;gap:10px;justify-items:start;padding-block:56px 72px;max-width:56ch}
+.soon h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.6rem,4vw,2.2rem);margin:0}
+.soon p{margin:0;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Colégio 7 de Setembro</p>
+    <h1>Novos uniformes</h1>
+    <p class="lead">Veja as informações gerais e escolha o segmento do seu filho para conhecer as peças. Toque em <b>Costas</b> para ver o verso e monte sua combinação.</p>
+    <span class="draft">Versão de validação</span>
+    <nav class="tabs" role="tablist" aria-label="Seções" id="tabs"></nav>
+  </div>
+</header>
+
+<section class="wrap soon" id="emBreve" hidden><h2>Em breve</h2><p>O catálogo dos novos uniformes será publicado em breve. Acompanhe os comunicados da escola.</p></section>
+<main id="main">
+  <div class="wrap">
+    <div id="info" hidden></div>
+    <div id="vitrine">
+      <div class="rule"><span class="dot" aria-hidden="true"></span>
+        <div><b>A combinação é livre dentro do segmento.</b>
+        <p id="ruleText">Qualquer camisa do segmento pode ser usada com qualquer calça, bermuda ou short-saia. O agasalho é opcional.</p></div>
+      </div>
+      <div id="groups"></div>
+    </div>
+    <aside class="look" id="look" aria-labelledby="lookTitle">
+      <h2 id="lookTitle">Monte a combinação</h2>
+      <p class="hint" id="lookHint"></p>
+      <div class="stage" id="stage"></div>
+      <ul class="slots" id="slots"></ul>
+      <button class="clear" id="clear" type="button">Limpar combinação</button>
+    </aside>
+  </div>
+</main>
+<button class="jump" id="jump" type="button">Ver combinação <b id="jumpN">0</b></button>
+<footer><div class="wrap">Imagens ilustrativas. Tons podem variar conforme a tela.</div></footer>
+
+<script src="data.js"></script>
+<script>
+function iniciarCatalogo(){
+  var SEG = window.SEGMENTOS, PECAS = window.PECAS;
+  var GRUPOS = [
+    { titulo:"Camisas para o dia a dia", filtro:function(p){return p.grupo==="cima"&&p.tipo==="Regular";} },
+    { titulo:"Educação Física e AEC", filtro:function(p){return p.grupo==="cima"&&(p.tipo==="Educação Física"||p.tipo==="AEC");} },
+    { titulo:"Tempo Integral", filtro:function(p){return p.grupo==="cima"&&p.tipo==="Integral";} },
+    { titulo:"Calças, bermudas e shorts", filtro:function(p){return p.grupo==="baixo";} },
+    { titulo:"Agasalhos", filtro:function(p){return p.grupo==="agasalho";} }
+  ];
+  var INFO_TAB = {id:"informacoes", nome:"Informações", curto:"Info"};
+  var segAtual = INFO_TAB.id, ultimoSeg = null, look = {cima:null,baixo:null,agasalho:null}, lado = {};
+  var byId = {}; PECAS.forEach(function(p){byId[p.id]=p;});
+  function img(p,l){return "img/"+p.id+"-"+(l||"frente")+".webp";}
+  function el(t,c,h){var e=document.createElement(t); if(c)e.className=c; if(h!=null)e.innerHTML=h; return e;}
+  function curto(id){for(var i=0;i<SEG.length;i++) if(SEG[i].id===id) return SEG[i].curto; return id;}
+
+  // Abas
+  var tabs = document.getElementById("tabs");
+  [INFO_TAB].concat(SEG).forEach(function(s){
+    var b=el("button","tab"); b.type="button"; b.id="tab-"+s.id; b.setAttribute("role","tab");
+    b.innerHTML='<span class="lg">'+s.nome+'</span><span class="sm">'+s.curto+'</span>'; b.addEventListener("click",function(){ location.hash=s.id; });
+    tabs.appendChild(b);
+  });
+
+  function render(){
+    document.querySelectorAll(".tab").forEach(function(t){ var on=t.id==="tab-"+segAtual; t.setAttribute("aria-selected", on);
+      if(on){ var n=t.parentNode; n.scrollLeft=Math.max(0,t.offsetLeft-(n.clientWidth-t.offsetWidth)/2); } });
+    var isInfo = segAtual===INFO_TAB.id;
+    document.getElementById("main").classList.toggle("info",isInfo);
+    document.getElementById("info").hidden=!isInfo; document.getElementById("vitrine").hidden=isInfo;
+    document.getElementById("jump").hidden=true;
+    if(isInfo){ renderInfo(); postHeight(); return; }
+    var box=document.getElementById("groups"); box.innerHTML="";
+    var noSeg=PECAS.filter(function(p){return p.segmentos.indexOf(segAtual)>-1;});
+    GRUPOS.forEach(function(g){
+      var itens=noSeg.filter(g.filtro); if(!itens.length) return;
+      var sec=el("section","grp"); var hd=el("div","grp-head");
+      hd.appendChild(el("h2",null,g.titulo)); hd.appendChild(el("span",null,itens.length+(itens.length>1?" peças":" peça")));
+      sec.appendChild(hd); var grid=el("div","grid");
+      itens.forEach(function(p){ grid.appendChild(card(p)); });
+      sec.appendChild(grid); box.appendChild(sec);
+    });
+    renderLook();
+  }
+
+  function renderInfo(){
+    var box=document.getElementById("info"); box.innerHTML="";
+    box.appendChild(el("p","info-intro","O C7S apresenta os novos uniformes. A combinação das peças é livre, sempre dentro do segmento do aluno."));
+    var facts=el("div","facts");
+    (window.INFO||[]).forEach(function(i){
+      var f=el("article","fact"); f.appendChild(el("span","k",i.titulo)); f.appendChild(el("span","v",i.destaque));
+      i.linhas.forEach(function(l){ f.appendChild(el("p",null,l)); }); facts.appendChild(f);
+    });
+    box.appendChild(facts);
+    var w=el("section","where"); var h=el("div"); h.appendChild(el("span","city","Onde comprar · "+(window.CIDADE||"")));
+    h.appendChild(el("h2",null,"Fornecedores autorizados")); w.appendChild(h);
+    var vs=el("div","vendors");
+    (window.FORNECEDORES||[]).forEach(function(v){
+      var d=el("div","vendor"); d.appendChild(el("b",null,v.nome)); var ul=el("ul");
+      v.locais.forEach(function(l){ ul.appendChild(el("li",null,l)); }); d.appendChild(ul); vs.appendChild(d);
+    });
+    w.appendChild(vs); box.appendChild(w);
+    var go=el("section","go"); go.appendChild(el("h2",null,"Ver as peças por segmento")); var gl=el("div","go-list");
+    SEG.forEach(function(s){ var a=el("a",null,s.nome+'<span aria-hidden="true">→</span>'); a.href="#"+s.id; gl.appendChild(a); });
+    go.appendChild(gl); box.appendChild(go);
+  }
+
+  function card(p){
+    var c=el("article","card"+(isOn(p)?" on":"")); c.dataset.id=p.id;
+    var shot=el("div","shot"); var im=el("img"); im.src=img(p,lado[p.id]); im.alt=p.nome+" ("+(lado[p.id]||"frente")+")"; im.loading="lazy"; im.decoding="async";
+    shot.appendChild(im);
+    if(p.costas){
+      var f=el("div","flip"); f.setAttribute("role","group"); f.setAttribute("aria-label","Lado da peça");
+      ["frente","costas"].forEach(function(l){
+        var b=el("button",null,l==="frente"?"Frente":"Costas"); b.type="button";
+        b.setAttribute("aria-pressed",(lado[p.id]||"frente")===l);
+        b.addEventListener("click",function(){ lado[p.id]=l; im.style.opacity=.2; setTimeout(function(){im.src=img(p,l); im.alt=p.nome+" ("+l+")"; im.style.opacity=1;},120);
+          f.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b);}); });
+        f.appendChild(b);
+      });
+      shot.appendChild(f);
+    }
+    c.appendChild(shot);
+    var body=el("div","body"); body.appendChild(el("h3",null,p.nome));
+    if(p.obs) body.appendChild(el("p","obs",p.obs));
+    var chips=el("div","chips");
+    if(p.tipo!=="Regular") chips.appendChild(el("span","chip",p.tipo));
+    var outros=p.segmentos.filter(function(s){return s!==segAtual;});
+    if(outros.length===SEG.length-1) chips.appendChild(el("span","chip also","Todos os segmentos"));
+    else if(outros.length) chips.appendChild(el("span","chip also","Também: "+outros.map(curto).join(", ")));
+    if(chips.children.length) body.appendChild(chips);
+    var pick=el("button","pick"); pick.type="button"; setPick(pick,p);
+    pick.addEventListener("click",function(){ toggle(p); });
+    body.appendChild(pick); c.appendChild(body);
+    return c;
+  }
+  function slotOf(p){return p.grupo;}
+  function isOn(p){return look[slotOf(p)]===p.id;}
+  function setPick(b,p){ var on=isOn(p); b.setAttribute("aria-pressed",on); b.textContent=on?"Na combinação ✓":"Usar na combinação"; }
+  function toggle(p){
+    var s=slotOf(p); look[s]= look[s]===p.id?null:p.id;
+    if(s==="cima"&&look.cima&&byId[look.cima].inteira) look.baixo=null;
+    if(s==="baixo"&&look.baixo&&look.cima&&byId[look.cima].inteira) look.cima=null;
+    document.querySelectorAll(".card").forEach(function(c){
+      var q=byId[c.dataset.id]; c.classList.toggle("on",isOn(q)); setPick(c.querySelector(".pick"),q);
+    });
+    renderLook();
+  }
+  function renderLook(){
+    var stage=document.getElementById("stage"); stage.innerHTML="";
+    var c=look.cima&&byId[look.cima], b=look.baixo&&byId[look.baixo], a=look.agasalho&&byId[look.agasalho];
+    if(!c&&!b&&!a){ stage.appendChild(el("p","empty","Escolha uma camisa e uma parte de baixo para ver o conjunto.")); }
+    [c,b].forEach(function(p){ if(p){ var i=el("img"); i.src=img(p); i.alt=p.nome; stage.appendChild(i);} });
+    if(a){ var i=el("img","coat"); i.src=img(a); i.alt=a.nome; if(!c&&!b){i.className="";} stage.appendChild(i); }
+    var sl=document.getElementById("slots"); sl.innerHTML="";
+    var inteira=c&&c.inteira;
+    [["Camisa",c],["Parte de baixo",inteira?{nome:"Incluída no vestido"}:b],["Agasalho",a]].forEach(function(r){
+      var li=el("li"); li.appendChild(el("span",null,r[0])); li.appendChild(el("span",null,r[1]?r[1].nome:"—")); sl.appendChild(li);
+    });
+    var seg=SEG.filter(function(s){return s.id===segAtual;})[0];
+    document.getElementById("lookHint").textContent="Somente peças de "+seg.nome+".";
+    var n=[c,b,a].filter(Boolean).length; document.getElementById("jumpN").textContent=n; document.getElementById("jump").hidden=!n;
+    postHeight();
+  }
+  document.getElementById("clear").addEventListener("click",function(){ look={cima:null,baixo:null,agasalho:null}; render(); });
+  document.getElementById("jump").addEventListener("click",function(){ document.getElementById("look").scrollIntoView({behavior:"smooth",block:"start"}); });
+
+  function fromHash(){
+    var h=(location.hash||"").replace("#",""); var ok=SEG.some(function(s){return s.id===h;});
+    var novo= ok?h:INFO_TAB.id;
+    if(ok && novo!==ultimoSeg){
+      // mantém só as peças que também valem no novo segmento
+      ["cima","baixo","agasalho"].forEach(function(k){ if(look[k]&&byId[look[k]].segmentos.indexOf(novo)<0) look[k]=null; });
+    }
+    segAtual=novo; if(ok) ultimoSeg=novo; render(); if(window.scrollY>200) window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange",fromHash);
+
+  // Altura para o iframe no WordPress se ajustar sozinho
+  function postHeight(){ try{ if(window.parent!==window) window.parent.postMessage({c7sUniformesAltura:Math.ceil(document.body.getBoundingClientRect().height)},"*"); }catch(e){} }
+  window.addEventListener("load",postHeight); window.addEventListener("resize",postHeight);
+
+  fromHash();
+}
+</script>
+<script>
+/* Chave de liberação: lê liberacao.json sempre atualizado (sem cache).
+   Bloqueado: mostra "Em breve", exceto com ?previa=CODIGO no endereço (usado no iframe de teste). */
+(function(){
+  var CODIGO_PREVIA = "previa-43518a";
+  var emIframe = window.parent !== window;
+  if (emIframe) document.documentElement.classList.add("embed");
+  var previa = new URLSearchParams(location.search).get("previa") === CODIGO_PREVIA;
+  var main = document.getElementById("main"), tabs = document.getElementById("tabs"),
+      draft = document.querySelector(".draft"), lead = document.querySelector(".lead"), soon = document.getElementById("emBreve");
+  main.hidden = true; tabs.hidden = true; draft.hidden = true;
+  function avisarAltura(){ if(emIframe){ try{ parent.postMessage({c7sUniformesAltura: Math.ceil(document.body.getBoundingClientRect().height)}, "*"); }catch(e){} } }
+  function abrir(liberado){
+    main.hidden = false; tabs.hidden = false; draft.hidden = liberado; /* selo só aparece na prévia */
+    iniciarCatalogo();
+    window.addEventListener("hashchange", function(){ if(emIframe){ try{ parent.postMessage({c7sUniformesTopo: true}, "*"); }catch(e){} } });
+  }
+  function bloquear(){ soon.hidden = false; lead.hidden = true; avisarAltura(); }
+  fetch("liberacao.json?t=" + Date.now(), {cache: "no-store"})
+    .then(function(r){ return r.json(); })
+    .then(function(cfg){ if (cfg && cfg.liberado === true) abrir(true); else if (previa) abrir(false); else bloquear(); })
+    .catch(function(){ if (previa) abrir(false); else bloquear(); });
+  if (window.ResizeObserver) new ResizeObserver(avisarAltura).observe(document.body);
+  window.addEventListener("load", avisarAltura);
+})();
+</script>
+</body>
+</html>
