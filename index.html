@@ -338,7 +338,7 @@ function iniciarCatalogo(){
 /* Chave de liberação: lê liberacao.json sempre atualizado (sem cache).
    Bloqueado: mostra "Em breve", exceto com ?previa=CODIGO no endereço (usado no iframe de teste). */
 (function(){
-  var CODIGO_PREVIA = "previa-43518a";
+  var CODIGO_PREVIA = "previa-0105a";
   var emIframe = window.parent !== window;
   if (emIframe) document.documentElement.classList.add("embed");
   var previa = new URLSearchParams(location.search).get("previa") === CODIGO_PREVIA;
