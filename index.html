@@ -124,7 +124,9 @@ main.info aside.look,main.info .rule{display:none}
 .vendor{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:14px 16px}
 .vendor b{display:block;font-size:1.05rem;margin-bottom:6px}
 .where .start{margin:10px 0 0;display:inline-block;background:var(--sun);color:var(--ink);font-weight:600;font-size:.9rem;padding:4px 12px;border-radius:999px}
-.where .atuais{margin:0;color:#D6D8F5;font-size:.9rem;border-top:1px solid rgba(255,255,255,.16);padding-top:12px}
+.where .atuais{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 16px}
+.where .atuais p{margin:0;color:#D6D8F5;flex:1 1 260px}.where .atuais b{color:#fff}
+.where .tag-at{background:#fff;color:var(--ink);font-weight:700;font-size:.8rem;padding:4px 12px;border-radius:999px;white-space:nowrap}
 .vendor ul{margin:0;padding-left:18px;color:#D6D8F5;display:grid;gap:2px}
 .go h2{font-family:var(--f-display);font-weight:800;font-size:1.2rem;margin:0 0 12px}
 .go-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
@@ -256,7 +258,8 @@ function iniciarCatalogo(){
     });
     w.appendChild(vs);
     var at=window.UNIFORMES_ATUAIS;
-    if(at){ var l=at.fornecedores; w.appendChild(el("p","atuais","<b>Uniformes atuais:</b> seguem sendo vendidos até "+at.ate+" em "+l.slice(0,-1).join(", ")+" e "+l[l.length-1]+".")); }
+    if(at){ var l=at.fornecedores; var d=el("div","atuais"); d.appendChild(el("span","tag-at","Uniformes atuais"));
+      d.appendChild(el("p",null,"Podem ser comprados até <b>"+at.ate+"</b> nos fornecedores "+l.slice(0,-1).join(", ")+" e "+l[l.length-1]+".")); w.appendChild(d); }
     box.appendChild(w);
     var go=el("section","go"); go.appendChild(el("h2",null,"Ver as peças por segmento")); var gl=el("div","go-list");
     SEG.forEach(function(s){ var a=el("a",null,s.nome+'<span aria-hidden="true">→</span>'); a.href="#"+s.id; gl.appendChild(a); });
