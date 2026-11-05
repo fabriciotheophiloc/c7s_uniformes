@@ -74,7 +74,9 @@ window.INFO = [
     linhas: ["O aluno deve usar sempre tênis. O modelo é livre."] }
 ];
 window.FORNECEDORES = [
-  { nome: "Crescer Uniformes", locais: ["Ponto de venda na unidade Aldeota", "Ponto de venda na unidade Centro", "Unidade Eusébio (agenda especial e dias específicos)"] },
-  { nome: "Stamp Uniformes", locais: ["Sede Jacarecanga", "Sede Aldeota"] }
+  { nome: "Crescer Uniformes", locais: ["Lojas físicas nas sedes Aldeota e Centro", "Atendimento na sede Eusébio, com plantões em datas e horários específicos divulgados previamente"] },
+  { nome: "Stamp Uniformes", locais: ["Lojas nas unidades Jacarecanga e Aldeota"] }
 ];
+window.INICIO_VENDAS = "17/11/2026";
+window.UNIFORMES_ATUAIS = { ate: "o final de 2027", fornecedores: ["Art Farda", "Juarez Leitão", "Stamp Uniformes"] };
 window.CIDADE = "Fortaleza-CE";
