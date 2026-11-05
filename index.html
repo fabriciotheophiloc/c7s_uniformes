@@ -123,6 +123,8 @@ main.info aside.look,main.info .rule{display:none}
 .vendors{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .vendor{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:14px 16px}
 .vendor b{display:block;font-size:1.05rem;margin-bottom:6px}
+.where .start{margin:10px 0 0;display:inline-block;background:var(--sun);color:var(--ink);font-weight:600;font-size:.9rem;padding:4px 12px;border-radius:999px}
+.where .atuais{margin:0;color:#D6D8F5;font-size:.9rem;border-top:1px solid rgba(255,255,255,.16);padding-top:12px}
 .vendor ul{margin:0;padding-left:18px;color:#D6D8F5;display:grid;gap:2px}
 .go h2{font-family:var(--f-display);font-weight:800;font-size:1.2rem;margin:0 0 12px}
 .go-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
@@ -244,13 +246,18 @@ function iniciarCatalogo(){
     });
     box.appendChild(facts);
     var w=el("section","where"); var h=el("div"); h.appendChild(el("span","city","Onde comprar · "+(window.CIDADE||"")));
-    h.appendChild(el("h2",null,"Fornecedores autorizados")); w.appendChild(h);
+    h.appendChild(el("h2",null,"Fornecedores autorizados"));
+    if(window.INICIO_VENDAS) h.appendChild(el("p","start","Vendas dos novos uniformes a partir de <b>"+window.INICIO_VENDAS+"</b>"));
+    w.appendChild(h);
     var vs=el("div","vendors");
     (window.FORNECEDORES||[]).forEach(function(v){
       var d=el("div","vendor"); d.appendChild(el("b",null,v.nome)); var ul=el("ul");
       v.locais.forEach(function(l){ ul.appendChild(el("li",null,l)); }); d.appendChild(ul); vs.appendChild(d);
     });
-    w.appendChild(vs); box.appendChild(w);
+    w.appendChild(vs);
+    var at=window.UNIFORMES_ATUAIS;
+    if(at){ var l=at.fornecedores; w.appendChild(el("p","atuais","<b>Uniformes atuais:</b> seguem sendo vendidos até "+at.ate+" em "+l.slice(0,-1).join(", ")+" e "+l[l.length-1]+".")); }
+    box.appendChild(w);
     var go=el("section","go"); go.appendChild(el("h2",null,"Ver as peças por segmento")); var gl=el("div","go-list");
     SEG.forEach(function(s){ var a=el("a",null,s.nome+'<span aria-hidden="true">→</span>'); a.href="#"+s.id; gl.appendChild(a); });
     go.appendChild(gl); box.appendChild(go);
@@ -338,7 +345,7 @@ function iniciarCatalogo(){
 /* Chave de liberação: lê liberacao.json sempre atualizado (sem cache).
    Bloqueado: mostra "Em breve", exceto com ?previa=CODIGO no endereço (usado no iframe de teste). */
 (function(){
-  var CODIGO_PREVIA = "previa-0105a";
+  var CODIGO_PREVIA = "previa-43518a";
   var emIframe = window.parent !== window;
   if (emIframe) document.documentElement.classList.add("embed");
   var previa = new URLSearchParams(location.search).get("previa") === CODIGO_PREVIA;
